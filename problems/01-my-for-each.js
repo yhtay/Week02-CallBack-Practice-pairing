@@ -22,7 +22,10 @@ console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
 function myForEach(array, cb) {
-    // Your code here
+    for (let i = 0; i < array.length; i++) {
+        let currNum = array[i];
+        cb(currNum)
+    }
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
