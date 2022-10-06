@@ -28,6 +28,16 @@ console.log(result4); // 0
 
 function count(array, cb) {
   // Your code here
+  let result = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    let currItem = array[i];
+    if (cb(currItem)) {
+      result += 1;
+    }
+  }
+
+  return result;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
