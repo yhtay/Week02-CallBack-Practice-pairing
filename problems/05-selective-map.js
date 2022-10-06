@@ -44,19 +44,18 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function selectiveMap(array, selector, mapper) {
     let newArr = [];
+
     for (let i = 0; i < array.length; i++) {
-
+        let currNum = array[i];
+            if (selector(currNum)) {
+                newArr.push(mapper(currNum))
+            }
+            else {
+                newArr.push(currNum)
+            };
     }
+    return newArr;
 }
-
-console.log(selectiveMap([8, 5, 10, 4], isEven, square));
-// [ 64, 5, 100, 16 ]
-
-console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isEven, flipSign));
-// [ 10, -4, 7, -6, 2, -9 ]
-
-console.log(selectiveMap([-10, 4, 7, 6, -2, -9], isPositive, square));
-// [-10, 16, 49, 36, -2, -9]
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
